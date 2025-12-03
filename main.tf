@@ -29,5 +29,5 @@ resource "aws_route53_record" "mongodb" {
   name    = "dev.mongodb"
   type    = "A"
   ttl     = 300
-  records = [aws_instance.frontend.private_ip]
+  records = [aws_instance.mongodb.private_ip]
 }
