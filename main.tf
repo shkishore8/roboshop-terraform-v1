@@ -1,4 +1,4 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "frontend" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.small"
   vpc_security_group_ids = ["sg-02b07aa1827ae3703"]
@@ -7,7 +7,7 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "frontend" {
   zone_id = "Z04751093FJLNWEV5LUJS"
   name    = "test"
   type    = "A"
