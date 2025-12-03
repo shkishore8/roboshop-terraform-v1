@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = "Z04751093FJLNWEV5LUJS"
-  name    = "test"
+  name    = "frontend"
   type    = "A"
   ttl     = 300
   records = [aws_instance.frontend.private_ip]
@@ -26,7 +26,7 @@ resource "aws_instance" "mongodb" {
 
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z04751093FJLNWEV5LUJS"
-  name    = "test"
+  name    = "dev.mongodb"
   type    = "A"
   ttl     = 300
   records = [aws_instance.frontend.private_ip]
